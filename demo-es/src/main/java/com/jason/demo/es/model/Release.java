@@ -32,7 +32,7 @@ public class Release {
      */
     private String fileIdOrders;
 
-    @Field(type = FieldType.Keyword)
+    @Field(type = FieldType.Text)
     private String contentText;
 
     private Integer likes;

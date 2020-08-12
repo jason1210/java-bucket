@@ -15,3 +15,12 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
+###参考
+springboot+dubbo搭建：
+https://www.cnblogs.com/chy18883701161/p/12783892.html
+
+zookeeper安装：
+https://www.yuque.com/chaoyueshikong/project/nva9rl
+本地启动服务： 
+cd /usr/local/zookeeper
+./bin/zkServer.sh start

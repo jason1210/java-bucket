@@ -4,48 +4,47 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jason.demo</groupId>
-        <artifactId>demo</artifactId>
+        <artifactId>dubbo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.jason.demo</groupId>
-    <artifactId>dubbo</artifactId>
+    <artifactId>dubbo-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>dubbo</name>
+    <name>dubbo-server</name>
     <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>api</module>
-        <module>server</module>
-        <module>consumer</module>
-    </modules>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.jason.demo</groupId>
+            <artifactId>dubbo-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.5</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-dependencies-zookeeper -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-dependencies-zookeeper</artifactId>
+            <version>2.7.5</version>
+            <type>pom</type>
             <exclusions>
                 <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
+
     </dependencies>
 
     <build>

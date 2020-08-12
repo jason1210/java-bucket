@@ -1,0 +1,22 @@
+GET http://localhost:7002/redisson/testRedisson
+Content-Type: application/x-www-form-urlencoded
+
+<> 2020-08-12T063054.200.txt
+
+###
+
+GET http://localhost:7001/user/1
+Content-Type: application/x-www-form-urlencoded
+
+<> 2020-08-12T094422.200.json
+
+###
+
+GET http://localhost:7001/user/1
+
+###
+
+GET http://127.0.0.1:7001/user/1
+
+###
+

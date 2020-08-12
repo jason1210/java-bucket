@@ -24,3 +24,6 @@ https://www.yuque.com/chaoyueshikong/project/nva9rl
 本地启动服务： 
 cd /usr/local/zookeeper
 ./bin/zkServer.sh start
+
+dubbbo调优：
+https://www.yuque.com/chaoyueshikong/project/wa0emg

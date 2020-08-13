@@ -1,0 +1,35 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: shardingjdbc
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+    useColumnLabel: true
+  mapperLocations: classpath:mappers/**/*.xml
+  typeAliasesPackage: com.jason.demo.shardingsphere.model
+sharding:
+  jdbc:
+    datasource:
+      names: ds0
+      # 数据源ds0
+      ds0:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo-shardingjdbc
+        username: root
+        password: TbbXkkjCrm@2020
+    config:
+      sharding:
+        props:
+          sql.show: true
+        tables:
+          t_user:  #t_user表
+            key-generator-column-name: id  #主键
+            actual-data-nodes: ds0.t_user${0..1}    #数据节点,均匀分布
+            table-strategy:  #分表策略
+              inline: #行表达式
+                sharding-column: sex
+                algorithm-expression: t_user${sex % 2}  #按模运算分配
+

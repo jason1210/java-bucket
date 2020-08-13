@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jason.demo.shardingsphere.mapper.UserMapper">
+    <insert id="save" parameterType="User">
+        INSERT INTO t_user(name,phone,email,city_id,sex,password)
+        VALUES
+        (
+        #{name},#{phone},#{email},#{cityId},#{sex},#{password}
+        )
+    </insert>
+
+    <select id="get" parameterType="long" resultType="User">
+    	select * from t_user where id = #{id}
+    </select>
+</mapper>

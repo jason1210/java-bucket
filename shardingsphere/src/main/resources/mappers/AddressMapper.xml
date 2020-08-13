@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jason.demo.shardingsphere.mapper.AddressMapper">
+    <insert id="save" parameterType="Address">
+        INSERT INTO t_address(code,name,pid,type,lit)
+        VALUES
+        (
+        #{code},#{name},#{pid},#{type},#{lit}
+        )
+    </insert>
+
+    <select id="get" parameterType="long" resultType="Address">
+    	select * from t_address where id = #{id}
+    </select>
+</mapper>

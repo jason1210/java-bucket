@@ -1,5 +1,5 @@
 # java技术栈全家桶
-springboot，dubbo，zookeeper，elasticsearch,feign,rabbitmq,redisson,shardingjdbc
+springboot，dubbo，zookeeper，elasticsearch，feign，rabbitmq，redisson，shardingjdbc
 
 ## dubbo
 参考:

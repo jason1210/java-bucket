@@ -21,6 +21,7 @@
 		<module>feign</module>
 		<module>rabbitmq</module>
 		<module>shardingsphere</module>
+		<module>seata</module>
 	</modules>
 
 	<properties>

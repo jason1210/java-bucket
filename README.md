@@ -1,5 +1,5 @@
 # java技术栈全家桶
-springboot，dubbo，zookeeper，elasticsearch，feign，rabbitmq，redisson，shardingjdbc
+springboot，dubbo，zookeeper，elasticsearch，feign，rabbitmq，redisson，shardingjdbc，seata
 
 ## dubbo
 参考:
@@ -37,3 +37,6 @@ org.redisson.api.RedissonClient
 
 ## shardingjdbc  
 参考： https://blog.csdn.net/u010391342/article/details/89526366
+
+## seata  
+参考： https://github.com/seata/seata

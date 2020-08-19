@@ -40,3 +40,6 @@ org.redisson.api.RedissonClient
 
 ## seata  
 参考： https://github.com/seata/seata
+
+## xxl-job  
+参考： https://www.fangzhipeng.com/architecture/2020/06/13/xxljob-test.html

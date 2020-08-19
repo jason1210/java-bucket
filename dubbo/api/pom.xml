@@ -46,6 +46,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--命名可执行jar名字，默认可执行Jar包与普通jar命名相同，前者会将后者覆盖，可执行Jar不能够被其他模块引用-->
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
             </plugin>
         </plugins>
     </build>

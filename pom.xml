@@ -22,7 +22,7 @@
 		<module>rabbitmq</module>
 		<module>shardingsphere</module>
 		<module>seata</module>
-		<module>click-farm</module>
+		<module>task</module>
 	</modules>
 
 	<properties>

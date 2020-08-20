@@ -3,48 +3,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.jason.demo</groupId>
+		<artifactId>demo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.jason.demo</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>click-farm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>demo</name>
+	<name>click-farm</name>
 	<description>Demo project for Spring Boot</description>
-
-	<modules>
-		<module>dubbo</module>
-		<module>es</module>
-		<module>feign</module>
-		<module>rabbitmq</module>
-		<module>shardingsphere</module>
-		<module>seata</module>
-		<module>click-farm</module>
-	</modules>
 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
-	<distributionManagement>
-		<repository>
-			<id>rdc-releases</id>
-			<url>https://repo.rdc.aliyun.com/repository/133206-release-qAJbIN/</url>
-		</repository>
-		<snapshotRepository>
-			<id>rdc-snapshots</id>
-			<url>https://repo.rdc.aliyun.com/repository/133206-snapshot-SdouW7/</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
@@ -57,6 +33,16 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>4.5.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
 		</dependency>
 	</dependencies>
 

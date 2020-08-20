@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 /**
- * 线索数据同步定时任务
+ * 同步定时任务
  *
- * @author cong
+ * @author jason
  * @date 2020/3/2
  */
 @Slf4j

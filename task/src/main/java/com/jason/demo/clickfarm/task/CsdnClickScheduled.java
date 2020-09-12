@@ -32,4 +32,18 @@ public class CsdnClickScheduled {
         }
     }
 
+    /**
+     * 刷新百科点击量
+     */
+    //@Scheduled(cron = "0/1 * * * * ?")
+    @Scheduled(cron = "30 * * * * ?")
+    public void clickWebBaike() {
+        log.info("定时刷新csdn的springboot技术栈博客点击量");
+        try {
+            UrlCrawBoke.doGet("https://blog.csdn.net/zhu719224032/article/details/107999106");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

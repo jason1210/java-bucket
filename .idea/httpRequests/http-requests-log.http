@@ -1,3 +1,31 @@
+POST http://localhost:7005/user/update/500827792494034944
+Content-Type: Content-Type: application/json
+
+<> 2020-09-12T093953.200.json
+
+###
+
+POST http://localhost:7005/user/update/500827792494034944
+Content-Type: Content-Type: application/json
+
+<> 2020-09-12T093608.200.json
+
+###
+
+POST http://localhost:7005/user/update/500827792494034944
+Content-Type: Content-Type: application/json
+
+<> 2020-09-12T093427.200.json
+
+###
+
+POST http://localhost:7005/user/update/500827792494034944
+Content-Type: Content-Type: application/json
+
+<> 2020-09-12T092824.200.json
+
+###
+
 POST http://localhost:8084/api/business/purchase/rollback
 Content-Type: Content-Type: application/json
 

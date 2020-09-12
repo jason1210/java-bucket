@@ -24,7 +24,6 @@ public class UrlCrawBoke {
     static String userId = "zhu719224032";
 
     public static void main(String urlstr[]) throws IOException, InterruptedException {
-
         Set<String> urls = new HashSet<String>();
 
         // ----------------------------------------------遍历每一页 获取文章链接----------------------------------------------

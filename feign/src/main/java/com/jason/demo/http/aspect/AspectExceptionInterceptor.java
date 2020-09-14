@@ -25,7 +25,6 @@ public class AspectExceptionInterceptor {
     @AfterThrowing(pointcut = ("execution(* com.jason.demo.http..*(..)) && @annotation(com.jason.demo.http.annotation.RetryProcess)"))
     public void tryAgain(JoinPoint point) {
         try {
-            Object object = point.getTarget();
             MethodSignature methodSignature = (MethodSignature)point.getSignature();
             RetryProcess retryProcess = methodSignature.getMethod().getAnnotation(RetryProcess.class);
 

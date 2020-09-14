@@ -1,3 +1,95 @@
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022730.500.json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022435.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022414.500.json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022325.500.json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022108.500.json
+
+###
+
+POST http://localhost:7071/testException2
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T022044.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T021057.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T020904.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T020824.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T020716.500.json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+###
+
+POST http://localhost:7071/testException
+Content-Type: Content-Type: application/json
+
+<> 2020-09-14T020506.404.json
+
+###
+
 POST http://localhost:7005/user/update/500827792494034944
 Content-Type: Content-Type: application/json
 

@@ -28,6 +28,8 @@ Elasticsearch 一个典型应用就是 ELK 日志分析系统。
 
 ## feign
 参考： https://www.cnblogs.com/lushichao/p/12796408.html
+add 接口调用失败重试方案   2020-09-14
+
 
 ## rabbitmq
 参考： https://www.jianshu.com/p/8fe4bc1c584d?utm_campaign=hugo

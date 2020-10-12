@@ -1,10 +1,16 @@
 package com.jason.demo.chat.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.jason.demo.chat.pojo.Server2ClientMessage;
+import com.jason.demo.chat.pojo.TestVO;
 import com.jason.demo.chat.utils.FastJsonUtils;
 import org.springframework.stereotype.Component;
 
-import javax.websocket.*;
+import javax.websocket.OnClose;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -16,14 +22,15 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class WebSocketServer {
     private static int onlineCount = 0;
     private static CopyOnWriteArraySet<WebSocketServer> webSocketSet =
-            new CopyOnWriteArraySet<WebSocketServer>();
+        new CopyOnWriteArraySet<WebSocketServer>();
     private Session session;
     public String id;
     public String to;
+
     @OnOpen
     public void onOpen(Session session,
                        @PathParam("id") String id,
-                       @PathParam("to")String to) throws IOException {
+                       @PathParam("to") String to) throws IOException {
         this.session = session;
         this.id = id;
         this.to = to;
@@ -31,35 +38,42 @@ public class WebSocketServer {
         onlineAdd();
 
     }
+
     @OnMessage
-    public void onMessage(Session session,String message,
+    public void onMessage(Session session, String message,
                           @PathParam("id") String id,
                           @PathParam("to") String to) throws IOException {
+
         System.out.println(
             "session = [" + session + "], message = [" + message + "], id = [" + id + "], to = [" + to + "]");
+
+        TestVO testVO = JSONObject.parseObject(message, TestVO.class);
+        System.out.println("序列化后---------》"+JSON.toJSONString(testVO));
         webSocketSet.stream()
-                .filter(e->e.id.equals(this.to)&&e!=this)
-                .forEach(e-> {
-                    try {
-                        e.session.getBasicRemote()
-                                .sendText(FastJsonUtils
-                                        .toJSONString(new Server2ClientMessage(message,new Date(),1)));
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-                });
+            .filter(e -> e.id.equals(this.to) && e != this)
+            .forEach(e -> {
+                try {
+                    e.session.getBasicRemote()
+                        .sendText(FastJsonUtils
+                            .toJSONString(new Server2ClientMessage(message, new Date(), 1)));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            });
 
     }
+
     @OnClose
-    public void close(){
+    public void close() {
         webSocketSet.remove(this);
         onlineSub();
     }
 
-    public synchronized  void onlineAdd(){
+    public synchronized void onlineAdd() {
         onlineCount++;
     }
-    public synchronized void onlineSub(){
+
+    public synchronized void onlineSub() {
         onlineCount--;
     }
 }

@@ -1,4 +1,4 @@
-package cn.blingfeng.websocket.config;
+package com.jason.demo.chat.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

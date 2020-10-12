@@ -23,6 +23,7 @@
 		<module>shardingsphere</module>
 		<module>seata</module>
 		<module>task</module>
+		<module>chat</module>
 	</modules>
 
 	<properties>

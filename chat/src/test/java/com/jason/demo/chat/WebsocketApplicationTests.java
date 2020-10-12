@@ -1,4 +1,4 @@
-package cn.blingfeng.websocket;
+package com.jason.demo.chat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

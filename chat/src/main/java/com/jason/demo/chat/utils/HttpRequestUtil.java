@@ -1,4 +1,4 @@
-package cn.blingfeng.websocket.utils;
+package com.jason.demo.chat.utils;
 
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;

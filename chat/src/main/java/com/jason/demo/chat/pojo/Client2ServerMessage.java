@@ -1,4 +1,4 @@
-package cn.blingfeng.websocket.pojo;
+package com.jason.demo.chat.pojo;
 
 import java.util.Date;
 

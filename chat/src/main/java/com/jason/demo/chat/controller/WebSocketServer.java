@@ -1,7 +1,7 @@
-package cn.blingfeng.websocket.controller;
+package com.jason.demo.chat.controller;
 
-import cn.blingfeng.websocket.pojo.Server2ClientMessage;
-import cn.blingfeng.websocket.utils.FastJsonUtils;
+import com.jason.demo.chat.pojo.Server2ClientMessage;
+import com.jason.demo.chat.utils.FastJsonUtils;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -9,7 +9,6 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.Date;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @ServerEndpoint("/websocket/{id}/{to}")

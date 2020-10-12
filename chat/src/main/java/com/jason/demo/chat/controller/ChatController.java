@@ -1,16 +1,12 @@
-package cn.blingfeng.websocket.controller;
+package com.jason.demo.chat.controller;
 
-import cn.blingfeng.websocket.pojo.ChatResult;
-import cn.blingfeng.websocket.pojo.WxLoginResult;
-import cn.blingfeng.websocket.utils.FastJsonUtils;
-import cn.blingfeng.websocket.utils.HttpRequestUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
+import com.jason.demo.chat.pojo.ChatResult;
+import com.jason.demo.chat.pojo.WxLoginResult;
+import com.jason.demo.chat.utils.FastJsonUtils;
+import com.jason.demo.chat.utils.HttpRequestUtil;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.Queue;
 import java.util.Random;
 
 @RestController

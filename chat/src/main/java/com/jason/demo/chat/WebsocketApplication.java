@@ -1,4 +1,4 @@
-package cn.blingfeng.websocket;
+package com.jason.demo.chat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

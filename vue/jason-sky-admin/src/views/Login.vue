@@ -13,11 +13,14 @@
         name: "Login",
         data(){
             return {
-                message: "hello jason !"
+                message: "welcom, hello jason !"
             }
         },
         methods:{
 
+        },
+        mounted() {
+            
         },
         created(){
             console.log("created");

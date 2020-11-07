@@ -23,11 +23,10 @@
             
         },
         created(){
-            console.log("created");
+            // console.log("created");
             document.title="hello,jason!";
         }
     }
-
 </script>
 
 <style scoped>

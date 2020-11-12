@@ -8,8 +8,23 @@ export function request(config){
         timeout : 5000
     })
 
-    //发送真正的网络请求
-    return   instance(config)
+    //2.axios拦截器
+    instance.interceptors.request.use(config=>{
+        console.log(config);
+        return config
+    },err =>{
+        console.log(err)
+    })
+
+    instance.interceptors.response.use(res =>{
+        console.log(res)
+        return res;
+    },err=>{
+        console.log(err)
+    })
+
+    //3.发送真正的网络请求
+    return instance(config)
     
 }
 

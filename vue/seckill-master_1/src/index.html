@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="topheader">
+        <span id="close" class="oprBtn">关闭(x)</span>
+        <span id="addNewTask" class="oprBtn" title="右键选中目标">新增秒杀(+)</span>
+        <h2>任务列表</h2>
+    </div>
+    <div class="standerTime">本机时间：
+        <input type="radio" value="1" name="useLocalTime" checked="checked" title="使用本机时间">是
+        <input type="radio" value="0" name="useLocalTime" title="使用服务器时间">否
+        (<span id="standTime"></span>)
+        <input type="button" style="margin-left: 10px;display: none;" value="校准" id="calibration" title="使用标准服务器北京时间进行校准">
+    </div>
+    <span id="message"></span>
+
+    <div  id="templateCard">
+        <div class="taskContainer" style="display: none;">
+            <div class="header">
+                <span datafld="name">秒杀Iphonex </span>
+            </div>
+            <div class="content">
+                <div class="list">URL：<span datafld="url">https://item.m.jd.com/product/100012043978.html?wxa_abtest=o&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends&ad_od=share&gx=RnFmwjQPPDzRn9TAEjqj1d8p7YS0gPc</span></div>
+                <!-- <div class="list">URL：<span datafld="url">http://www.jd.com/xxx/xx</span></div> -->
+
+                <div class="list">选择器：<span datafld="selector">jquery</span></div>
+                <div class="list">路径：<span datafld="location">#secKillBtn</span></div>
+                <div class="list">秒杀时间：<span class="update" datafld="killTime">2017-11-11 12:00:00</span><input type="datetime-local" class="updateInput" name="killTime" value="" ></div>
+                <div class="list">剩余时间：<span datafld="leftTime">00:00:00</span></div>
+                <div class="list">秒杀频率：<span class="update" datafld="frequency">500</span><input type="number" name="frequency"  class="updateInput" value="">ms/次</div>
+                <div class="list">秒杀次数: <span class="update" datafld="count">10</span><input type="number" name="count"  class="updateInput" value="">次</div>
+            </div>
+
+            <div class="footer">
+                <ul id="">
+                    <li datatype="status">状态</li>
+                    <li>启动</li>
+                    <li>暂停</li>
+                    <li>修改</li>
+                    <li>删除</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
